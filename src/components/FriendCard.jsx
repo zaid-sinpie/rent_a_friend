@@ -34,8 +34,10 @@ const FriendCard = ({ className }) => {
       </CardContent>
       <CardDescription className="w-full h-[20%] overflow-hidden text-[8px] relative">
         <p className="text-justify px-2">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur,
-          quidem maxime. Quidem earum nihil, tempore sint ad accusantium quis
+          {`Singing dancing travelling photography gym fitness yoga
+          meditation cooking baking cafe hopping watching movies watching
+          anime watching series listening to music guitar piano karaoke
+          painting drawing digital art fashion`}
         </p>
         <div className="absolute bottom-0 left-0 h-5 w-full bg-linear-to-b from-[#fff0] to-[#303438] z-10"></div>
       </CardDescription>
