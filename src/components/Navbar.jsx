@@ -5,16 +5,32 @@ import {
 import { Button } from "@/components/ui/button";
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ setLoginModal, setSignupModal }) => {
+  function handleAuthBtns(type) {
+    if (type === "login") {
+      setLoginModal((prev) => !prev);
+    }
+    if (type === "signup") {
+      setSignupModal((prev) => !prev);
+    }
+  }
   return (
     <NavigationMenu className="sm:min-w-full fixed top-0 left-0 py-2 px-4 flex justify-between items-center">
       <h1 className="text-[24px] cursor-pointer font-semibold">TOMO</h1>
       <nav>
         <NavigationMenuList className="flex justify-center items-center gap-4 p-0">
-          <Button variant={"link"} className="uppercase">
+          <Button
+            onClick={() => handleAuthBtns("login")}
+            variant={"link"}
+            className="uppercase"
+          >
             Login
           </Button>
-          <Button variant={"link"} className="uppercase">
+          <Button
+            onClick={() => handleAuthBtns("signup")}
+            variant={"link"}
+            className="uppercase"
+          >
             Signup
           </Button>
         </NavigationMenuList>
