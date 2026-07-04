@@ -3,9 +3,7 @@
 import { Eye, EyeOff } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-
 import { Input } from "@/components/ui/input";
-
 import { Card, CardContent } from "@/components/ui/card";
 
 import { Separator } from "@/components/ui/separator";
@@ -24,7 +22,7 @@ export default function Signup() {
             <div className="h-full w-[80%] relative">
               <div className="h-full w-full absolute backdrop-blur-[1px] bg-[#20222918] z-5"></div>
               <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop"
+                src="/signupBg.png"
                 alt="background"
                 className="h-full w-full object-cover rounded-sm"
               />
