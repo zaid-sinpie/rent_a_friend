@@ -1,6 +1,6 @@
 "use client";
 
-import { Eye, ArrowRight } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -8,11 +8,14 @@ import { Input } from "@/components/ui/input";
 
 import { Card, CardContent } from "@/components/ui/card";
 
-import { Checkbox } from "@/components/ui/checkbox";
-
 import { Separator } from "@/components/ui/separator";
+import { useState } from "react";
 
 export default function Signup() {
+  const [showPassowrd, setShowPassword] = useState(false);
+  const togglePassword = () => {
+    setShowPassword((prev) => !prev);
+  };
   return (
     <div className="h-full w-full p-6 text-[#FDC3A1]">
       <Card className="w-full h-full bg-transparent shadow-none outline-none border-none ring-0">
@@ -61,16 +64,21 @@ export default function Signup() {
 
                     <div className="relative">
                       <Input
-                        type="password"
+                        type={showPassowrd ? "text" : "password"}
                         placeholder="Enter your password"
                         className="rounded-sm border-white/10 bg-[#262931] p-2 text-white placeholder:text-[#FDC3A1]/30 placeholder:text-[12px] focus-visible:ring-1 focus-visible:ring-[#FDC3A1]"
                       />
 
                       <button
+                        onClick={togglePassword}
                         type="button"
                         className="absolute right-5 top-1/2 -translate-y-1/2 text-[#FDC3A1]/40 hover:text-[#FDC3A1]"
                       >
-                        <Eye className="h-4 w-4" />
+                        {showPassowrd ? (
+                          <EyeOff className="h-4 w-4" />
+                        ) : (
+                          <Eye className="h-4 w-4" />
+                        )}
                       </button>
                     </div>
                   </div>
