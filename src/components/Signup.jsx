@@ -107,12 +107,12 @@ export default function Signup() {
                   <div className="flex justify-center items-center">
                     <Button
                       variant="outline"
-                      className="rounded-sm w-full flex justify-center items-center border-white/10 bg-[#262931] text-[#FDC3A1] hover:bg-[#2D3038] hover:text-[#FDC3A1]"
+                      className="rounded-sm w-full flex justify-center items-center border-white/10 bg-[#262931] text-[#FDC3A1] hover:bg-[#2D3038] hover:text-[#FDC3A1] text-[12px]"
                     >
                       <img
                         src="https://www.svgrepo.com/show/475656/google-color.svg"
                         alt="google"
-                        className="mr-3 h-5 w-5"
+                        className="h-5 w-5"
                       />
                       Google
                     </Button>
