@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Signup() {
   const [showPassowrd, setShowPassword] = useState(false);
@@ -15,7 +16,7 @@ export default function Signup() {
     setShowPassword((prev) => !prev);
   };
   return (
-    <div className="h-full w-full p-6 text-[#FDC3A1]">
+    <div className="h-full w-full p-6 text-[#FDC3A1] bg-[#262931]">
       <Card className="w-full h-full bg-transparent shadow-none outline-none border-none ring-0">
         <CardContent className="p-0 w-full h-full flex justify-around items-center">
           <div className="w-full h-full flex justify-start items-start relative">
@@ -36,10 +37,10 @@ export default function Signup() {
                   </h1>
 
                   <p className="text-[#FDC3A1]/60 text-[12px]">
-                    Don’t have an account?{" "}
-                    <button className="underline underline-offset-4 hover:text-[#FDC3A1]">
-                      Sign up
-                    </button>
+                    Already have an account?{" "}
+                    <NavLink to={'/'} className="underline underline-offset-4 hover:text-[#FDC3A1]">
+                      Login
+                    </NavLink>
                   </p>
                 </div>
 
