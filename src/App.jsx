@@ -3,8 +3,8 @@ import HeroCard from "./components/HeroCard";
 import FriendCard from "./components/FriendCard";
 import CustomDialog from "./components/CustomDialog";
 import { useState } from "react";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   const [loginModal, setLoginModal] = useState("");
