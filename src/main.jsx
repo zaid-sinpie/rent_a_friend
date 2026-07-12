@@ -17,11 +17,11 @@ const router = createBrowserRouter([
         index: true,
         element: <Hero />,
       },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
     ],
-  },
-  {
-    path: "signup",
-    element: <Signup />,
   },
 ]);
 

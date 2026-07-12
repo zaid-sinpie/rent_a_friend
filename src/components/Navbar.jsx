@@ -11,7 +11,10 @@ const Navbar = ({ setLoginModal }) => {
   }
   return (
     <NavigationMenu className="sm:min-w-full fixed top-0 left-0 py-4 px-4 flex justify-between items-center bg-[#FEFEFE] shadow z-10">
-      <h1 className="text-[24px] cursor-pointer font-semibold">TOMO</h1>
+      <h1 className="text-[24px] cursor-pointer font-semibold flex justify-center items-center gap-2">
+        <img src="/logo.png" alt="logo_image" className="h-7" />
+        TOMO
+      </h1>
       <nav>
         <NavigationMenuList className="flex justify-center items-center gap-4 p-0">
           <Button
