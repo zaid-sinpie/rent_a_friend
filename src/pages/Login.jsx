@@ -48,14 +48,11 @@ export default function Login() {
       className="flex flex-col justify-center gap-4 text-[12px] px-4 py-5"
     >
       <div className="flex flex-col justify-start items-start gap-1">
-        <h1 className="text-[18px] font-bold text-[#FDC3A1]">Welcome back</h1>
+        <h1 className="text-[18px] font-bold">Welcome back</h1>
 
-        <p className="text-[#FDC3A1]/60 text-[12px]">
+        <p className="text-[12px]">
           Don’t have an account?{" "}
-          <NavLink
-            to="/signup"
-            className="underline underline-offset-4 hover:text-[#FDC3A1]"
-          >
+          <NavLink to="/signup" className="underline underline-offset-4">
             Sign up
           </NavLink>
         </p>
@@ -66,10 +63,7 @@ export default function Login() {
           control={form.control}
           render={({ field, fieldState }) => (
             <Field>
-              <FieldLabel
-                htmlFor={field.name}
-                className="font-medium text-[#FDC3A1]"
-              >
+              <FieldLabel htmlFor={field.name} className="font-medium text-[12px]">
                 Email
               </FieldLabel>
 
@@ -80,7 +74,7 @@ export default function Login() {
                 autoComplete="off"
                 placeholder="Enter your email"
                 aria-invalid={fieldState.invalid}
-                className="rounded-sm border-white/10 bg-[#262931] p-2 text-white placeholder:text-[#FDC3A1]/30 placeholder:text-[12px] focus-visible:ring-1 focus-visible:ring-[#FDC3A1]"
+                className="rounded-sm bg-white p-2 pr-12 text-black placeholder:text-[#e3e3e3] placeholder:text-[12px] focus-visible:ring-0 focus-visible:ring-[#9669ff]"
               />
 
               {fieldState.invalid && (
@@ -99,7 +93,7 @@ export default function Login() {
             <Field>
               <FieldLabel
                 htmlFor={field.name}
-                className="font-medium text-[#FDC3A1]"
+                className="font-medium text-[12px]"
               >
                 Password
               </FieldLabel>
@@ -111,13 +105,13 @@ export default function Login() {
                   type={showPassowrd ? "text" : "password"}
                   placeholder="Enter your password"
                   aria-invalid={fieldState.invalid}
-                  className="rounded-sm border-white/10 bg-[#262931] p-2 pr-12 text-white placeholder:text-[#FDC3A1]/30 placeholder:text-[12px] focus-visible:ring-1 focus-visible:ring-[#FDC3A1]"
+                  className="rounded-sm bg-white p-2 pr-12 text-black placeholder:text-[#e3e3e3] placeholder:text-[12px] focus-visible:ring-0 focus-visible:ring-[#9669ff]"
                 />
 
                 <button
                   type="button"
                   onClick={togglePassword}
-                  className="absolute right-5 top-1/2 -translate-y-1/2 text-[#FDC3A1]/40 hover:text-[#FDC3A1]"
+                  className="absolute right-5 top-1/2 -translate-y-1/2 text-[#9669ff] hover:text-[#9669ff]"
                 >
                   {showPassowrd ? (
                     <EyeOff className="h-4 w-4" />
@@ -141,7 +135,7 @@ export default function Login() {
       <div className="flex items-center justify-between">
         <button
           type="button"
-          className="underline underline-offset-4 text-[#FDC3A1]/70 hover:text-[#FDC3A1]"
+          className="underline underline-offset-4 text-[#9669ff]"
         >
           Forgot password?
         </button>
@@ -150,14 +144,14 @@ export default function Login() {
       <Button
         type="submit"
         disabled={form.formState.isSubmitting}
-        className="w-full rounded-sm text-[12px] bg-[#FDC3A1] font-semibold text-[#262931] hover:bg-[#FDC3A1]/90"
+        className="w-full rounded-sm text-[12px] text-white bg-[#9669ff] hover:border-[#9669ff] font-semibold hover:text-[#262931] hover:bg-white"
       >
         {form.formState.isSubmitting ? "Logging in..." : "Log in"}
       </Button>
 
       <div className="flex items-center gap-4">
         <Separator className="flex-1 bg-white/10" />
-        <span className="text-xs text-[#FDC3A1]/50">or continue with</span>
+        <span className="text-xs text-[#9669ff]">or continue with</span>
         <Separator className="flex-1 bg-white/10" />
       </div>
 
@@ -165,7 +159,7 @@ export default function Login() {
         <Button
           type="button"
           variant="outline"
-          className="rounded-sm w-full flex justify-center items-center border-white/10 bg-[#262931] text-[#FDC3A1] hover:bg-[#2D3038] hover:text-[#FDC3A1] text-[12px]"
+          className="rounded-sm w-full flex justify-center items-center border-white/10 hover:bg-[#d2d2d2] text-black bg-white hover:border-[#e3e3e3] hover:text-white text-[12px]"
         >
           <img
             src="https://www.svgrepo.com/show/475656/google-color.svg"
