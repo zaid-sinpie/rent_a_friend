@@ -14,6 +14,9 @@ import { Input } from "@/components/ui/input";
 
 import { Eye, EyeOff } from "lucide-react";
 import { ShieldCheck, Star, CalendarDays, Lock } from "lucide-react";
+import CustomDialog from "@/components/CustomDialog";
+import Login from "./Login";
+import { useOutletContext } from "react-router-dom";
 
 const loginSchema = z
   .object({
@@ -76,6 +79,8 @@ const features = [
 ];
 
 export default function Signup() {
+  const { loginModal, handleLoginModalClose } = useOutletContext();
+
   const form = useForm({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -338,6 +343,9 @@ export default function Signup() {
           </section>
         </div>
       </div>
+      <CustomDialog open={loginModal} onOpenChange={handleLoginModalClose}>
+        <Login />
+      </CustomDialog>
     </main>
   );
 }

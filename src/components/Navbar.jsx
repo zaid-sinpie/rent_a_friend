@@ -20,7 +20,7 @@ const Navbar = ({ setLoginModal }) => {
           <Button
             onClick={handleAuthBtns}
             variant={"outline"}
-            className="py-2 px-4 rounded-sm text-black text-[12px] bg-transparent"
+            className="p-4 rounded-sm text-black text-[12px] bg-transparent"
           >
             Log In
           </Button>

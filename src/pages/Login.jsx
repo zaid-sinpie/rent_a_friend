@@ -47,8 +47,8 @@ export default function Login() {
       onSubmit={form.handleSubmit(onSubmit)}
       className="flex flex-col justify-center gap-4 text-[12px] px-4 py-5"
     >
-      <div className="flex flex-col justify-start items-start gap-1">
-        <h1 className="text-[18px] font-bold">Welcome back</h1>
+      <div className="flex flex-col justify-start items-start gap-1 text-[#464646]">
+        <h1 className="text-[20px] font-bold">Welcome back</h1>
 
         <p className="text-[12px]">
           Don’t have an account?{" "}
@@ -63,7 +63,10 @@ export default function Login() {
           control={form.control}
           render={({ field, fieldState }) => (
             <Field>
-              <FieldLabel htmlFor={field.name} className="font-medium text-[12px]">
+              <FieldLabel
+                htmlFor={field.name}
+                className="font-medium text-[12px] text-black"
+              >
                 Email
               </FieldLabel>
 
@@ -74,7 +77,7 @@ export default function Login() {
                 autoComplete="off"
                 placeholder="Enter your email"
                 aria-invalid={fieldState.invalid}
-                className="rounded-sm bg-white p-2 pr-12 text-black placeholder:text-[#e3e3e3] placeholder:text-[12px] focus-visible:ring-0 focus-visible:ring-[#9669ff]"
+                className="rounded-sm bg-white p-5 pr-12 text-black placeholder:text-[#e3e3e3] placeholder:text-[12px] focus-visible:ring-0 focus-visible:ring-[#9669ff]"
               />
 
               {fieldState.invalid && (
@@ -93,7 +96,7 @@ export default function Login() {
             <Field>
               <FieldLabel
                 htmlFor={field.name}
-                className="font-medium text-[12px]"
+                className="font-medium text-[12px] text-black"
               >
                 Password
               </FieldLabel>
@@ -105,7 +108,7 @@ export default function Login() {
                   type={showPassowrd ? "text" : "password"}
                   placeholder="Enter your password"
                   aria-invalid={fieldState.invalid}
-                  className="rounded-sm bg-white p-2 pr-12 text-black placeholder:text-[#e3e3e3] placeholder:text-[12px] focus-visible:ring-0 focus-visible:ring-[#9669ff]"
+                  className="rounded-sm bg-white p-5 pr-12 text-black placeholder:text-[#e3e3e3] placeholder:text-[12px] focus-visible:ring-0 focus-visible:ring-[#9669ff]"
                 />
 
                 <button
@@ -144,22 +147,22 @@ export default function Login() {
       <Button
         type="submit"
         disabled={form.formState.isSubmitting}
-        className="w-full rounded-sm text-[12px] text-white bg-[#9669ff] hover:border-[#9669ff] font-semibold hover:text-[#262931] hover:bg-white"
+        className="text-[12px] px-4 py-5 hover:bg-[#9669ff]"
       >
         {form.formState.isSubmitting ? "Logging in..." : "Log in"}
       </Button>
 
       <div className="flex items-center gap-4">
-        <Separator className="flex-1 bg-white/10" />
-        <span className="text-xs text-[#9669ff]">or continue with</span>
-        <Separator className="flex-1 bg-white/10" />
+        <span className="text-[12px] text-[#464646] w-full text-center">
+          or continue with
+        </span>
       </div>
 
       <div className="flex justify-center items-center">
         <Button
           type="button"
           variant="outline"
-          className="rounded-sm w-full flex justify-center items-center border-white/10 hover:bg-[#d2d2d2] text-black bg-white hover:border-[#e3e3e3] hover:text-white text-[12px]"
+          className="text-[12px] text-black px-4 py-5 hover:bg-white w-full"
         >
           <img
             src="https://www.svgrepo.com/show/475656/google-color.svg"
