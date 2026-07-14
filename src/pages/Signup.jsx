@@ -286,7 +286,7 @@ export default function Signup() {
                   <label className="flex justify-start items-center gap-2 text-sm text-slate-600">
                     <input type="checkbox" className="size-4" />
 
-                    <span>
+                    <span className="flex justify-center items-center gap-2">
                       I agree to the
                       <a className="font-medium text-violet-600">
                         Terms of Service
