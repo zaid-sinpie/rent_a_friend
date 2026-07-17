@@ -1,11 +1,16 @@
+import { useLocation } from "react-router-dom";
+
 import {
   NavigationMenu,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import React from "react";
 
 const Navbar = ({ setLoginModal }) => {
+  const location = useLocation();
+
+  const hideLogin = ["/signup"].includes(location.pathname);
+
   function handleAuthBtns() {
     setLoginModal((prev) => !prev);
   }
@@ -17,13 +22,13 @@ const Navbar = ({ setLoginModal }) => {
       </h1>
       <nav>
         <NavigationMenuList className="flex justify-center items-center gap-4 p-0">
-          <Button
+          {!hideLogin && <Button
             onClick={handleAuthBtns}
             variant={"outline"}
             className="p-4 rounded-sm text-black text-[12px] bg-transparent"
           >
             Log In
-          </Button>
+          </Button>}
         </NavigationMenuList>
       </nav>
     </NavigationMenu>
